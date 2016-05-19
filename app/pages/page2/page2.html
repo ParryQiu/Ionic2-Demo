@@ -1,0 +1,24 @@
+<ion-navbar *navbar>
+    <ion-title>
+        朋友
+    </ion-title>
+</ion-navbar>
+<ion-content class="page2">
+    <ion-list>
+        <ion-item-sliding *ngFor="#contact of contacts">
+            <ion-item (click)="itemClick($event,contact)">
+                <ion-avatar item-left>
+                    <img src="images/{{contact.contactid}}.jpg" />
+                </ion-avatar>
+                <h2>{{contact.contactname}}</h2>
+                <p>{{contact.contacttext}}</p>
+            </ion-item>
+            <ion-item-options>
+                <button danger (click)="removeContact(contact)">
+                    <ion-icon name="trash"></ion-icon>
+                    删除
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>

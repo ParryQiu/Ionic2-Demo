@@ -1,0 +1,26 @@
+<ion-navbar *navbar>
+    <ion-title>用户中心</ion-title>
+</ion-navbar>
+<ion-content padding class="page3">
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>用户名</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="user.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>密码</ion-label>
+            <ion-input type="password" value="" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button block (click)="login()">登录</button>
+    <ion-row>
+        <ion-col>
+            <div class="textAlignRight marginTop10">
+                <button outline (click)="openRegisterPage()">还没有账号？点击注册</button>
+            </div>
+        </ion-col>
+    </ion-row>
+   <!--  <ion-row>
+        <img src="{{user.headface}}" (click)="uploadImage()"/>
+    </ion-row> -->
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-navbar *navbar>
+    <ion-title>
+         朋友
+    </ion-title>
+</ion-navbar>
+<ion-content class="page2">
+
+    <ion-list>
+        <ion-item *ngFor="#contact of contacts" (click)="itemClick($event,contact)">
+            <ion-avatar item-left>
+                <img src="images/{{contact.contactid}}.jpg" />
+            </ion-avatar>
+            <h2>{{contact.contactname}}</h2>
+            <p>{{contact.contacttext}}</p>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>
